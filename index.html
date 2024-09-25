@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Movie Explorer</title>
+</head>
+<body>
+  <header>
+    <h1>MovieMisChief</h1>
+    <input type="text" id="search-input" placeholder="Search for movies..." />
+    <button id="search-btn">Search</button>
+    <button id="watchlist-btn">Watchlist</button>
+    <button id="subscription-btn">Subscribe</button>
+  </header> 
+
+  <main>
+    <!-- Section to display the list of movies -->
+    <section id="latest-movies" class="grid-layout"></section>
+
+    <!-- Movie details modal (hidden by default) -->
+    <div id="movie-details" class="modal hidden">
+      <div id="details-content">
+        <button id="add-to-watchlist">Add to Watchlist</button>
+        <button id="back-to-main">Back</button>
+      </div>
+    </div>
+
+    <!-- Watchlist modal (hidden by default) -->
+    <div id="watchlist" class="modal hidden">
+      <div id="watchlist-header">
+        <button id="back-to-main-watchlist" class="back-button">Back</button>
+        <p id="watchlist-count"></p>
+      </div>
+      <div id="watchlist-content">
+        <div id="watchlist-movies" class="watchlist-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
